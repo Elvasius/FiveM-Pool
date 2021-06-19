@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="pool.css">
+
+    </head>
+<body>
+   <div id="container">
+    <div id="myProgress">
+        <div id="myBar">0%</div>
+      </div>
+
+   </div>
+</body>
+<script>
+    function frame(power) {
+        var elem = document.getElementById("myBar");  
+
+elem.style.height = (100-power) + '%'; 
+//elem.innerHTML = power * 1  + '%';
+}
+window.addEventListener('message', (event) => {
+    if (event.data.type === 'power') {
+        frame(event.data.power * 100);
+    }
+});
+
+</script>
+</html>

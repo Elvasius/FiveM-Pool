@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="pool.css">
+
+    </head>
+<body>
+   <div id="container">
+    <div id="myProgress">
+        <div id="myBar">0</div>
+      </div>
+
+   </div>
+</body>
+<script>
+    function move() {
+var elem = document.getElementById("myBar");   
+var height = 0;
+var id = setInterval(frame, 100);
+function frame() {
+if (height >= 70) {
+clearInterval(id);
+} else {
+height++; 
+elem.style.height = (100 - height) + '%'; 
+elem.innerHTML = height * 1  + '%';
+}
+}
+}
+window.onload = move();
+</script>
+</html>

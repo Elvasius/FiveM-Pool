@@ -1,0 +1,17 @@
+#container {
+    width: 100%;
+}
+#myProgress {
+    width:100px;
+    background-color: red;
+    height:600px;
+    float: right;
+  }
+  
+  #myBar {
+    width: 100px;
+    background-color: #4CAF50;
+    text-align: center;
+    color: white;
+    height:100%;
+  }
